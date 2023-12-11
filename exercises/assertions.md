@@ -71,14 +71,12 @@ public void testMethodeNonImplementee() {
 ```
 
 4. JUnit : 
-- Clarté et lisibilité du code : assertThrows offre une approche plus claire et explicite pour vérifier les exceptions attendues. Elle rend le code plus lisible en déplaçant la logique d'assertion spécifique à l'exception dans une méthode dédiée, ce qui améliore la lisibilité du test.
+- En déplaçant la logique d'assertion spécifique à l'exception dans une méthode dédiée, assertThrows offre une approche plus explicite, rendant ainsi le code plus lisible et améliorant la clarté des tests.
 
-- Flexibilité : Avec assertThrows, vous pouvez vérifier non seulement le type de l'exception mais aussi son message ou d'autres propriétés associées à l'exception levée. Cela permet des validations plus précises et spécifiques des exceptions attendues.
+- assertThrows offre des possibilités de validations plus précises et spécifiques des exceptions attendues.
 
-- Facilité d'utilisation : L'utilisation de assertThrows est plus simple et plus directe que d'utiliser l'annotation @Test avec l'argument expected dans JUnit 4. Cette méthode offre une syntaxe plus claire et plus intuitive pour les tests d'exceptions.
+- assertThrows assure une meilleure évolutivité des tests.
 
-- Évolutivité : assertThrows offre une meilleure évolutivité en permettant des validations plus avancées sur les exceptions levées. Vous pouvez effectuer des assertions supplémentaires sur l'exception capturée, telles que la vérification de son message, de son état ou d'autres propriétés pertinentes.
+- Favorise la maintenabilité du code de test en évitant la duplication de code dans plusieurs tests.
 
-- Maintenabilité : En regroupant la logique de validation des exceptions attendues dans une méthode distincte (assertThrows), le code de test devient plus maintenable et évite la duplication de code dans plusieurs tests.
-
-- Compatibilité avec les lambdas : assertThrows prend en charge l'utilisation de lambdas, ce qui permet d'écrire du code plus concis et plus expressif pour la validation des exceptions dans les tests.
+- assertThrows est compatible avec l'utilisation de lambdas.
