@@ -25,6 +25,15 @@ double difference = Math.abs(result - expected);
 assertTrue("The difference exceeds the threshold", difference < threshold);
 ```
 
+Autre possibilité est d'utiliser BigDecimale :
+
+```
+BigDecimal result = BigDecimal.valueOf(3).multiply(BigDecimal.valueOf(0.4));
+BigDecimal expected = BigDecimal.valueOf(1.2);
+
+assertTrue("Les nombres ne sont pas égaux", result.compareTo(expected) == 0);
+```
+
 2. assertEquals && assertSame
 
 assertEquals :
