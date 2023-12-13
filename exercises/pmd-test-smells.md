@@ -23,3 +23,4 @@ JUnitStaticSuite = "Testing private methods" car cela test l'implémentation et 
 
 Example :
 
+TODO AJOUTER EXAMPLE
