@@ -21,9 +21,19 @@ class Date implements Comparable<Date> {
     }
 
     public static boolean isLeapYear(int year) {
-        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-            return true; // Année bissextile
+        if(year >= 0){
+            if ((year % 4 == 0)) {
+                if(year % 100 != 0){
+                    return true; // Année bissextile
+                }
+
+            }
+
+            if(year % 400 == 0){
+                return true; // Année bissextile
+            }
         }
+
         return false;
     }
 
@@ -64,5 +74,9 @@ class Date implements Comparable<Date> {
             return -1;
         }
     }
+
+
+
+
 
 }
