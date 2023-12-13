@@ -15,22 +15,11 @@ Include the improved test code in this file.
 
 ## Answer
 
-code executer:
+DetachedTestCase, JUnit4SuitesShouldUseSuiteAnnotation, JUnit4TestShouldUseAfterAnnotation, JUnit4TestShouldUseBeforeAnnotation, JUnit4TestShouldUseTestAnnotation, JUnitSpelling, JUnitTestsShouldIncludeAssert = "Manual intervention"
 
-```shell
-pmd check -f text -R category/java/bestpractices.xml -d /home/arthurlair/Documents/Universite/M2_ILA/ProjGit/VV/commons-collections/src/main/java
-```
+JUnitTestContainsTooManyAsserts = "Free ride" ou "Eager test" ou "Assertion roulette" car cela peux amener plusieurs cas de test qui sont tester dans un seul test.
 
-exemple bad smell obtenu:
+JUnitStaticSuite = "Testing private methods" car cela test l'implémentation et non le résultat.
 
-```
-/home/arthurlair/Documents/Universite/M2_ILA/ProjGit/VV/commons-collections/src/main/java/org/apache/commons/collections4/bag/AbstractMapBag.java:465:	AvoidReassigningParameters:	Avoid reassigning parameters such as 'array'
-```
-
-correctif a apporté:
-
-Cette alerte nous indique qu'il ne faut pas redéfinir des variables passées en paramètre. Pour corriger cette mauvaise pratique, on peut parcourir le tableau et effectuer une opération sur chaque élément, ce qui permet de le modifier sans le redéfinir.
-
-
-
+Example :
 
